@@ -1,0 +1,17 @@
+Step 1: flash nodemcu firmware
+    ref: https://github.com/nodemcu/nodemcu-firmware
+- pinout:
+    vcc, reset, ch -pd, gp02    3.3v
+    gnd, gp00                         gnd
+- download esptool
+- run: sudo python esptool.py --port /dev/tty.usbserial  write_flash 0x00000 ~/git/github/arduino/nodemcu_float_0.9.6-dev_20150704.bin
+
+Step 2: upload example code using ESPlorer
+- downloaf ESPlorer
+- change pinout:
+    release gpoo, reset
+- open ESPlorer jar
+- connect -> save
+
+Step 3: code
+   
